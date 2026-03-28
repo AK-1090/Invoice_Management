@@ -1,0 +1,515 @@
+/* InvoiceList.css - Soft Pastel Theme */
+
+/* Main Container */
+.invoice-list-fullpage {
+  padding: 0 !important;
+  min-height: 100vh;
+  background: radial-gradient(circle at 20% 30%, #e8e4f0, #f5f3f8 60%, #faf9fc);
+  position: relative;
+  overflow: auto;
+}
+
+/* Floating Background Shapes */
+.floating-shape {
+  position: fixed;
+  border-radius: 50%;
+  filter: blur(80px);
+  animation: float 8s ease-in-out infinite;
+  z-index: 0;
+  mix-blend-mode: screen;
+  pointer-events: none;
+}
+
+.floating-shape-1 {
+  top: 10%;
+  left: 5%;
+  width: 260px;
+  height: 260px;
+  background: radial-gradient(
+    circle,
+    rgba(167, 139, 250, 0.4),
+    rgba(167, 139, 250, 0.1)
+  );
+}
+
+.floating-shape-2 {
+  top: 65%;
+  left: 70%;
+  width: 350px;
+  height: 350px;
+  background: radial-gradient(
+    circle,
+    rgba(167, 216, 250, 0.4),
+    rgba(167, 216, 250, 0.1)
+  );
+  animation-delay: -2s;
+}
+
+.floating-shape-3 {
+  top: 20%;
+  left: 80%;
+  width: 180px;
+  height: 180px;
+  background: radial-gradient(
+    circle,
+    rgba(250, 182, 204, 0.4),
+    rgba(250, 182, 204, 0.1)
+  );
+  animation-delay: -4s;
+}
+
+@keyframes float {
+  0%,
+  100% {
+    transform: translate(0, 0) scale(1);
+  }
+  50% {
+    transform: translate(20px, -25px) scale(1.06);
+  }
+}
+
+/* Content Wrapper */
+.invoice-list-content {
+  position: relative;
+  z-index: 1;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Header Section */
+.invoice-list-header {
+  background: rgba(255, 255, 255, 0.85);
+  backdrop-filter: blur(22px);
+  padding: 32px 30px;
+  border-bottom: 1px solid rgba(167, 139, 250, 0.2);
+  flex-shrink: 0;
+  box-shadow: 0 4px 20px rgba(167, 139, 250, 0.1);
+}
+
+.invoice-list-title {
+  color: #4a5568 !important;
+  margin: 0 !important;
+  font-size: 32px !important;
+  font-weight: 700 !important;
+}
+
+.invoice-list-subtitle {
+  color: rgba(74, 85, 104, 0.7);
+  font-size: 15px;
+  margin-top: 8px;
+  font-weight: 400;
+}
+
+/* Main Content Area */
+.invoice-list-main {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  padding: 30px;
+  gap: 24px;
+  overflow: visible;
+  min-height: 0;
+}
+
+/* Statistics Cards */
+.invoice-stats-row {
+  margin: 0 !important;
+  flex-shrink: 0;
+}
+
+.stat-card {
+  border-radius: 16px !important;
+  border: 1px solid rgba(167, 139, 250, 0.2) !important;
+  background: rgba(255, 255, 255, 0.9) !important;
+  backdrop-filter: blur(22px) saturate(180%);
+  box-shadow: 0 10px 30px rgba(167, 139, 250, 0.1) !important;
+  transition: all 0.3s ease;
+}
+
+.stat-card:hover {
+  background: rgba(255, 255, 255, 0.95) !important;
+  border-color: rgba(167, 139, 250, 0.3) !important;
+  box-shadow: 0 15px 40px rgba(167, 139, 250, 0.15) !important;
+}
+
+.stat-card-total {
+  border-left: 4px solid rgba(167, 139, 250, 0.6);
+}
+
+.stat-card-paid {
+  border-left: 4px solid rgba(134, 239, 172, 0.6);
+}
+
+.stat-card-overdue {
+  border-left: 4px solid rgba(250, 182, 204, 0.6);
+}
+
+.stat-card-amount {
+  border-left: 4px solid rgba(167, 216, 250, 0.6);
+}
+
+.stat-title {
+  color: rgba(74, 85, 104, 0.8) !important;
+  font-weight: 500 !important;
+  font-size: 13px !important;
+}
+
+.stat-prefix {
+  color: rgba(74, 85, 104, 0.6) !important;
+  margin-right: 8px;
+}
+
+/* Search Card */
+.search-card {
+  background: rgba(255, 255, 255, 0.9) !important;
+  backdrop-filter: blur(22px);
+  border: 1px solid rgba(167, 139, 250, 0.2) !important;
+  border-radius: 16px !important;
+  box-shadow: 0 10px 30px rgba(167, 139, 250, 0.1) !important;
+  padding: 16px !important;
+}
+
+.search-input {
+  width: 100%;
+  border-radius: 12px !important;
+  border: 1px solid rgba(167, 139, 250, 0.3) !important;
+  background: rgba(255, 255, 255, 0.95) !important;
+  color: #4a5568 !important;
+  padding: 12px 14px !important;
+  font-size: 14px !important;
+  transition: all 0.25s ease;
+}
+
+.search-input::placeholder {
+  color: rgba(167, 139, 250, 0.6) !important;
+}
+
+.search-input:focus {
+  border-color: #a78bfa !important;
+  box-shadow: 0 0 0 3px rgba(167, 139, 250, 0.2) !important;
+  background: #ffffff !important;
+}
+
+.search-prefix {
+  color: rgba(167, 139, 250, 0.8) !important;
+}
+
+.refresh-button {
+  border-radius: 12px !important;
+  border: 1px solid rgba(167, 139, 250, 0.3) !important;
+  background: rgba(255, 255, 255, 0.95) !important;
+  color: #4a5568 !important;
+  font-weight: 500 !important;
+  transition: all 0.25s ease;
+}
+
+.refresh-button:hover {
+  border-color: rgba(167, 139, 250, 0.5) !important;
+  background: #ffffff !important;
+}
+
+/* Table Section */
+.table-section {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  min-height: 400px;
+}
+
+.table-card {
+  background: rgba(255, 255, 255, 0.9) !important;
+  backdrop-filter: blur(22px);
+  border: 1px solid rgba(167, 139, 250, 0.2) !important;
+  border-radius: 16px !important;
+  box-shadow: 0 10px 30px rgba(167, 139, 250, 0.1) !important;
+  min-height: 400px;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+}
+
+.table-card-body {
+  padding: 0 !important;
+  border-radius: 16px !important;
+  overflow: auto;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Table Styling */
+.invoice-table {
+  background: transparent !important;
+  border-radius: 16px !important;
+}
+
+.invoice-table .ant-table-container {
+  border-radius: 16px !important;
+  background: rgba(255, 255, 255, 0.9) !important;
+  backdrop-filter: blur(18px);
+}
+
+.invoice-table .ant-table-wrapper {
+  border-radius: 16px !important;
+}
+
+.invoice-table .ant-table {
+  background: transparent !important;
+  border-radius: 16px !important;
+}
+
+.invoice-table .ant-table-thead > tr > th {
+  background: rgba(250, 249, 255, 0.95) !important;
+  backdrop-filter: blur(20px) saturate(180%);
+  color: #4a5568 !important;
+  font-weight: 700 !important;
+  border-bottom: 1px solid rgba(167, 139, 250, 0.2) !important;
+  padding: 14px 16px !important;
+  font-size: 13px !important;
+}
+
+.invoice-table .ant-table-tbody > tr > td {
+  background: rgba(255, 255, 255, 0.9) !important;
+  backdrop-filter: blur(16px) saturate(160%);
+  border-bottom: 1px solid rgba(167, 139, 250, 0.15) !important;
+  color: #4a5568 !important;
+  padding: 14px 16px !important;
+  transition: all 0.3s ease;
+}
+
+.invoice-table .ant-table-tbody > tr:last-child > td {
+  border-bottom: none !important;
+}
+
+.invoice-table .ant-table-cell {
+  color: #4a5568 !important;
+}
+
+.invoice-table .ant-table-row:hover {
+  background: transparent !important;
+}
+
+/* Loading State */
+.loading-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  padding: 40px 0;
+  flex: 1;
+  min-height: 400px;
+  color: #4a5568;
+}
+
+.loading-text {
+  margin-top: 16px;
+  color: rgba(74, 85, 104, 0.8);
+  font-weight: 500;
+}
+
+/* Error State */
+.error-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 40px 0;
+  flex: 1;
+  min-height: 400px;
+}
+
+.error-alert {
+  border-radius: 16px;
+  border: 1px solid rgba(250, 182, 204, 0.3) !important;
+  background: rgba(250, 182, 204, 0.15) !important;
+  backdrop-filter: blur(10px);
+  color: rgba(74, 85, 104, 0.9) !important;
+}
+
+.error-alert .ant-alert-message {
+  color: #4a5568 !important;
+  font-weight: 600;
+}
+
+.error-alert .ant-alert-description {
+  color: rgba(74, 85, 104, 0.8) !important;
+}
+
+.retry-button {
+  background: linear-gradient(135deg, #86efac, #4ade80) !important;
+  border: none !important;
+  border-radius: 12px !important;
+  color: #166534 !important;
+  font-weight: 600 !important;
+  transition: all 0.25s ease;
+}
+
+.retry-button:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 24px rgba(134, 239, 172, 0.5) !important;
+}
+
+/* Empty State */
+.empty-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 40px 0;
+  flex: 1;
+  min-height: 400px;
+}
+
+.empty-container .ant-empty-description {
+  color: rgba(74, 85, 104, 0.8) !important;
+}
+
+.clear-search-button {
+  background: linear-gradient(135deg, #c4b5fd, #a78bfa) !important;
+  border: none !important;
+  border-radius: 12px !important;
+  color: #4c1d95 !important;
+  font-weight: 600 !important;
+}
+
+.create-first-button {
+  background: linear-gradient(135deg, #86efac, #4ade80) !important;
+  border: none !important;
+  border-radius: 12px !important;
+  color: #166534 !important;
+  font-weight: 600 !important;
+}
+
+/* Action Buttons */
+.action-buttons {
+  border-radius: 12px !important;
+  border: none !important;
+  transition: all 0.25s ease;
+  font-weight: 500 !important;
+}
+
+.view-button {
+  color: rgba(167, 139, 250, 0.9) !important;
+  background: rgba(167, 139, 250, 0.15) !important;
+}
+
+.view-button:hover {
+  color: #4c1d95 !important;
+  background: rgba(167, 139, 250, 0.25) !important;
+}
+
+.edit-button {
+  color: rgba(196, 181, 253, 0.9) !important;
+  background: rgba(196, 181, 253, 0.15) !important;
+}
+
+.edit-button:hover {
+  color: #4c1d95 !important;
+  background: rgba(196, 181, 253, 0.25) !important;
+}
+
+.pdf-button {
+  color: rgba(125, 211, 252, 0.9) !important;
+  background: rgba(125, 211, 252, 0.15) !important;
+}
+
+.pdf-button:hover {
+  color: #0369a1 !important;
+  background: rgba(125, 211, 252, 0.25) !important;
+}
+
+.delete-button {
+  color: rgba(250, 182, 204, 0.9) !important;
+  background: rgba(250, 182, 204, 0.15) !important;
+}
+
+.delete-button:hover {
+  color: #9d174d !important;
+  background: rgba(250, 182, 204, 0.25) !important;
+}
+
+/* Status Tags */
+.status-tag {
+  color: white !important;
+  border: none !important;
+  border-radius: 12px !important;
+  padding: 4px 12px !important;
+  font-weight: 600 !important;
+  font-size: 12px !important;
+}
+
+.status-draft {
+  background: rgba(167, 139, 250, 0.4) !important;
+  border: 1px solid rgba(167, 139, 250, 0.6) !important;
+}
+
+.status-sent {
+  background: rgba(125, 211, 252, 0.4) !important;
+  border: 1px solid rgba(125, 211, 252, 0.6) !important;
+}
+
+.status-paid {
+  background: rgba(134, 239, 172, 0.4) !important;
+  border: 1px solid rgba(134, 239, 172, 0.6) !important;
+}
+
+.status-overdue {
+  background: rgba(250, 182, 204, 0.4) !important;
+  border: 1px solid rgba(250, 182, 204, 0.6) !important;
+}
+
+/* Create Button */
+.create-button {
+  background: linear-gradient(135deg, #86efac, #4ade80) !important;
+  border: none !important;
+  border-radius: 12px !important;
+  font-weight: 600 !important;
+  box-shadow: 0 4px 16px rgba(134, 239, 172, 0.35) !important;
+  color: #166534 !important;
+  transition: all 0.25s ease;
+}
+
+.create-button:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 24px rgba(134, 239, 172, 0.5) !important;
+}
+
+/* Text Styles */
+.invoice-number {
+  color: rgba(167, 139, 250, 0.9) !important;
+  font-weight: 700 !important;
+}
+
+.due-date-overdue {
+  color: rgba(250, 182, 204, 0.9) !important;
+  font-weight: 700 !important;
+}
+
+.due-date-normal {
+  color: rgba(134, 239, 172, 0.9) !important;
+  font-weight: 700 !important;
+}
+
+.issue-date {
+  color: rgba(167, 139, 250, 0.9) !important;
+  font-weight: 700 !important;
+}
+
+.total-amount {
+  color: rgba(196, 181, 253, 0.9) !important;
+  margin: 0 !important;
+  font-weight: 700 !important;
+}
+
+/* Statistic Component - Make numbers visible */
+.stat-card .ant-statistic-content-value {
+  color: #4a5568 !important;
+  font-weight: 700 !important;
+  font-size: 24px !important;
+  text-shadow: none !important;
+}
+
+.stat-card .ant-statistic-title {
+  color: rgba(74, 85, 104, 0.8) !important;
+  font-size: 13px !important;
+}

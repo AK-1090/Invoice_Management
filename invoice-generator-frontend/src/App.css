@@ -1,0 +1,26 @@
+/* Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+/* Make app stretch full page */
+html,
+body,
+#root {
+  height: 100%;
+  width: 100%;
+}
+
+/* Prevent body from shrinking */
+body {
+  background: #f5f5f7;
+  overflow-x: hidden;
+}
+
+/* Fix Antd default layout */
+.ant-layout {
+  background: transparent !important;
+}

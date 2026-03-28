@@ -1,0 +1,63 @@
+/* ----- Modal Styling - Soft Pastel Theme ----- */
+.template-modal .ant-modal-content {
+  background: linear-gradient(135deg, #f5f3f8 0%, #e8e4f0 100%);
+  border-radius: 16px !important;
+  box-shadow: 0 8px 25px rgba(167, 139, 250, 0.2);
+}
+
+.template-modal .ant-modal-header {
+  background: transparent;
+  border-bottom: none;
+}
+
+.template-modal .ant-modal-title {
+  color: #4a5568 !important;
+  font-size: 22px;
+  font-weight: 600;
+}
+
+/* ----- Card Styling ------ */
+.invoice-card {
+  border-radius: 16px;
+  overflow: hidden;
+  padding: 10px;
+  background: #ffffff;
+  transition: all 0.3s ease;
+  border: 1px solid rgba(167, 139, 250, 0.2);
+}
+
+.invoice-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 10px 25px rgba(167, 139, 250, 0.2);
+}
+
+/* Invoice preview wrapper */
+.invoice-wrapper {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  padding: 10px;
+}
+
+/* Invoice image fits nicely */
+.invoice-img {
+  width: 85%;
+  height: auto;
+  border-radius: 10px;
+  transition:
+    transform 0.3s ease,
+    box-shadow 0.3s ease;
+}
+
+/* Hover zoom effect */
+.invoice-card:hover .invoice-img {
+  transform: scale(1.06);
+  box-shadow: 0 8px 20px rgba(167, 139, 250, 0.2);
+}
+
+/* Title centered */
+.invoice-card .ant-card-meta-title {
+  text-align: center;
+  font-weight: 600;
+  color: #4a5568;
+}

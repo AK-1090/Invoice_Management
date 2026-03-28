@@ -1,0 +1,425 @@
+/* =====================================================
+   SOFT PASTEL INVOICE FORM THEME
+   ===================================================== */
+
+/* Global Smooth Scrolling */
+html {
+  scroll-behavior: smooth;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+/* Main Page Container */
+.invoice-form-page {
+  min-height: 100vh;
+  background: radial-gradient(circle at 20% 30%, #e8e4f0, #f5f3f8 60%, #faf9fc);
+  position: relative;
+  overflow: hidden;
+}
+
+.invoice-form-page,
+.invoice-form-page * {
+  color: #4a5568 !important;
+}
+
+/* Floating Background Elements */
+.invoice-form-page .floating-shape {
+  position: fixed;
+  border-radius: 50%;
+  filter: blur(80px);
+  animation: float 8s ease-in-out infinite;
+  z-index: 0;
+  mix-blend-mode: screen;
+  pointer-events: none;
+}
+
+.invoice-form-page .floating-shape-1 {
+  top: 10%;
+  left: 5%;
+  width: 260px;
+  height: 260px;
+  background: radial-gradient(
+    circle,
+    rgba(167, 139, 250, 0.4),
+    rgba(167, 139, 250, 0.1)
+  );
+}
+
+.invoice-form-page .floating-shape-2 {
+  top: 65%;
+  left: 70%;
+  width: 350px;
+  height: 350px;
+  background: radial-gradient(
+    circle,
+    rgba(167, 216, 250, 0.4),
+    rgba(167, 216, 250, 0.1)
+  );
+  animation-delay: -2s;
+}
+
+.invoice-form-page .floating-shape-3 {
+  top: 20%;
+  left: 80%;
+  width: 180px;
+  height: 180px;
+  background: radial-gradient(
+    circle,
+    rgba(250, 182, 204, 0.4),
+    rgba(250, 182, 204, 0.1)
+  );
+  animation-delay: -4s;
+}
+
+/* Form Container */
+.invoice-form-page .invoice-form-container {
+  position: relative;
+  z-index: 1;
+  min-height: 100vh;
+  padding: 30px;
+  overflow-y: auto;
+  overflow-x: hidden;
+  scroll-behavior: smooth;
+  -webkit-overflow-scrolling: touch;
+}
+
+/* Main Glass Card */
+.invoice-form-page .invoice-card {
+  border-radius: 22px !important;
+  border: 1px solid rgba(167, 139, 250, 0.2) !important;
+  background: rgba(255, 255, 255, 0.85) !important;
+  backdrop-filter: blur(22px) saturate(180%);
+  box-shadow:
+    0 18px 48px rgba(167, 139, 250, 0.15),
+    0 8px 24px rgba(167, 139, 250, 0.1);
+  overflow: visible !important;
+}
+
+.invoice-form-page .invoice-card .ant-card-head {
+  background: rgba(250, 249, 255, 0.95) !important;
+  border-bottom: 1px solid rgba(167, 139, 250, 0.2) !important;
+  padding: 16px !important;
+}
+
+.invoice-form-page .invoice-card .ant-card-body {
+  padding: 24px !important;
+}
+
+/* Sub Cards */
+.invoice-form-page .invoice-card .ant-card-small {
+  border-radius: 16px !important;
+  background: rgba(255, 255, 255, 0.9) !important;
+  border: 1px solid rgba(167, 139, 250, 0.2) !important;
+  box-shadow: 0 10px 30px rgba(167, 139, 250, 0.1) !important;
+}
+
+/* Form Inputs */
+.invoice-form-page .invoice-card .ant-input,
+.invoice-form-page .invoice-card .ant-picker,
+.invoice-form-page .invoice-card .ant-input-number,
+.invoice-form-page .invoice-card .ant-select-selector {
+  border-radius: 12px !important;
+  border: 1px solid rgba(167, 139, 250, 0.3) !important;
+  background: rgba(255, 255, 255, 0.95) !important;
+  padding: 10px 14px !important;
+  color: #4a5568 !important;
+  transition: all 0.25s ease;
+  font-size: 14px !important;
+}
+
+.invoice-form-page .invoice-card .ant-input::placeholder {
+  color: rgba(167, 139, 250, 0.6) !important;
+}
+
+.invoice-form-page .invoice-card .ant-input:focus,
+.invoice-form-page .invoice-card .ant-picker-focused,
+.invoice-form-page .invoice-card .ant-select-focused .ant-select-selector {
+  border-color: #a78bfa !important;
+  box-shadow: 0 0 0 3px rgba(167, 139, 250, 0.2) !important;
+  background: #ffffff !important;
+}
+
+/* Button Styling */
+.invoice-form-page .invoice-card .ant-btn {
+  border-radius: 12px !important;
+  transition: all 0.25s ease;
+  font-weight: 500 !important;
+}
+
+.invoice-form-page .invoice-card .ant-btn-default {
+  border: 1px solid rgba(167, 139, 250, 0.4) !important;
+  background: rgba(250, 249, 255, 0.95) !important;
+  color: #4a5568 !important;
+}
+
+.invoice-form-page .invoice-card .ant-btn-default:hover {
+  border-color: rgba(167, 139, 250, 0.6) !important;
+  background: rgba(255, 255, 255, 0.95) !important;
+  color: #4a5568 !important;
+}
+
+.invoice-form-page .invoice-card .ant-btn-text {
+  color: #4a5568 !important;
+  background: transparent !important;
+  border: none !important;
+}
+
+.invoice-form-page .invoice-card .ant-btn-text:hover {
+  background: rgba(167, 139, 250, 0.1) !important;
+}
+
+/* Table Styling */
+.invoice-form-page .invoice-card .ant-table {
+  background: transparent !important;
+  backdrop-filter: blur(18px) saturate(180%);
+  border-radius: 16px !important;
+  overflow: hidden;
+}
+
+.invoice-form-page .invoice-card .ant-table-thead > tr > th {
+  background: rgba(250, 249, 255, 0.95) !important;
+  backdrop-filter: blur(20px);
+  color: #4a5568 !important;
+  font-weight: 700 !important;
+  border-bottom: 1px solid rgba(167, 139, 250, 0.2) !important;
+  padding: 12px 16px !important;
+}
+
+.invoice-form-page .invoice-card .ant-table-tbody > tr > td {
+  background: rgba(255, 255, 255, 0.9) !important;
+  backdrop-filter: blur(16px) saturate(160%);
+  border-bottom: 1px solid rgba(167, 139, 250, 0.15) !important;
+  padding: 12px 16px !important;
+  transition: all 0.3s ease;
+}
+
+.invoice-form-page .invoice-card .ant-table-tbody > tr:last-child > td {
+  border-bottom: none !important;
+}
+
+.invoice-form-page .invoice-card .ant-table-tbody > tr:hover > td {
+  background: rgba(250, 249, 255, 0.95) !important;
+  backdrop-filter: blur(24px);
+  box-shadow: inset 0 0 12px rgba(167, 139, 250, 0.1);
+}
+
+/* Primary Button - Soft Green */
+.invoice-form-page .invoice-card .ant-btn-primary {
+  background: linear-gradient(135deg, #86efac, #4ade80) !important;
+  border-radius: 12px !important;
+  box-shadow: 0 4px 16px rgba(134, 239, 172, 0.35) !important;
+  border: none !important;
+  color: #166534 !important;
+  font-weight: 600 !important;
+}
+
+.invoice-form-page .invoice-card .ant-btn-primary:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 24px rgba(134, 239, 172, 0.5) !important;
+  background: linear-gradient(135deg, #4ade80, #22c55e) !important;
+}
+
+/* PDF Buttons - Soft Blue */
+.invoice-form-page .pdf-btn {
+  background: linear-gradient(135deg, #7dd3fc, #38bdf8) !important;
+  border-radius: 12px !important;
+  box-shadow: 0 4px 16px rgba(125, 211, 252, 0.35) !important;
+  border: none !important;
+  color: #0369a1 !important;
+  font-weight: 600 !important;
+  transition: all 0.25s ease;
+}
+
+.invoice-form-page .pdf-btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 24px rgba(125, 211, 252, 0.5) !important;
+  background: linear-gradient(135deg, #38bdf8, #0ea5e9) !important;
+}
+
+/* Layout Containers */
+.invoice-form-page .pdf-container,
+.invoice-form-page .summary-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Form Section Spacing */
+.invoice-form-page .form-section {
+  margin-top: 24px;
+  margin-bottom: 24px;
+}
+
+/* Currency Amount Styling */
+.invoice-form-page .currency-amount {
+  font-weight: 600;
+  color: #4a5568 !important;
+}
+
+.invoice-form-page .total-cell {
+  font-weight: 700;
+  font-size: 15px;
+}
+
+.invoice-form-page .summary-total {
+  font-size: 20px;
+  font-weight: 700;
+  color: #4a5568 !important;
+  text-align: right;
+  margin: 0;
+}
+
+/* Divider */
+.invoice-form-page .ant-divider {
+  border-color: rgba(167, 139, 250, 0.2) !important;
+  margin: 24px 0 !important;
+}
+
+/* Form Labels */
+.invoice-form-page .ant-form-item-label > label {
+  color: #4a5568 !important;
+  font-weight: 500 !important;
+}
+
+/* Custom Scrollbar - Container */
+.invoice-form-page .invoice-form-container::-webkit-scrollbar {
+  width: 8px;
+}
+
+.invoice-form-page .invoice-form-container::-webkit-scrollbar-track {
+  background: rgba(167, 139, 250, 0.1);
+  backdrop-filter: blur(12px);
+  border-radius: 10px;
+}
+
+.invoice-form-page .invoice-form-container::-webkit-scrollbar-thumb {
+  background: linear-gradient(
+    180deg,
+    rgba(167, 139, 250, 0.5),
+    rgba(125, 211, 252, 0.5)
+  );
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(167, 139, 250, 0.4);
+}
+
+.invoice-form-page .invoice-form-container::-webkit-scrollbar-thumb:hover {
+  background: linear-gradient(
+    180deg,
+    rgba(196, 181, 253, 0.7),
+    rgba(125, 211, 252, 0.7)
+  );
+  box-shadow: 0 0 14px rgba(167, 139, 250, 0.5);
+}
+
+/* Animations */
+@keyframes float {
+  0%,
+  100% {
+    transform: translate(0, 0) scale(1);
+  }
+  50% {
+    transform: translate(20px, -25px) scale(1.06);
+  }
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .invoice-form-page .invoice-form-container {
+    padding: 16px;
+  }
+
+  .invoice-form-page .invoice-card .ant-card-body {
+    padding: 16px !important;
+  }
+
+  .invoice-form-page .pdf-container {
+    flex-direction: column;
+    gap: 12px;
+  }
+
+  .invoice-form-page .pdf-container .ant-col {
+    width: 100%;
+  }
+
+  .invoice-form-page .pdf-container .ant-btn {
+    width: 100%;
+  }
+
+  .invoice-form-page .form-section {
+    margin-top: 16px;
+    margin-bottom: 16px;
+  }
+}
+
+@media (max-width: 480px) {
+  .invoice-form-page .floating-shape {
+    filter: blur(60px);
+    opacity: 0.5;
+  }
+
+  .invoice-form-page .floating-shape-1,
+  .invoice-form-page .floating-shape-2,
+  .invoice-form-page .floating-shape-3 {
+    width: 120px;
+    height: 120px;
+  }
+
+  .invoice-form-page .invoice-form-container {
+    padding: 12px;
+  }
+}
+
+.invoice-card {
+  text-align: center;
+}
+
+/* Fix button loading/spinning - make sure loader shows properly */
+.invoice-form-page .ant-btn-loading {
+  opacity: 1 !important;
+  pointer-events: none;
+}
+
+.invoice-form-page .ant-btn-loading-icon {
+  display: inline-flex !important;
+  align-items: center;
+  justify-content: center;
+}
+
+.invoice-form-page .ant-btn-loading-icon .anticon {
+  color: #166534 !important;
+  animation: none !important;
+}
+
+/* Remove continuous spin for any antd loading icons in this page */
+.invoice-form-page .anticon-loading,
+.invoice-form-page .ant-btn-loading .anticon {
+  animation: none !important;
+}
+
+/* Prevent loading icon from creating infinite animation */
+@keyframes antSpinNone {
+  to {
+    transform: none;
+  }
+}
+
+.invoice-form-page .ant-spin {
+  animation: none !important;
+}
+
+.invoice-form-page .ant-spin-dot-item {
+  animation: none !important;
+}

@@ -1,0 +1,91 @@
+/* Custom component styles - Soft Pastel Theme */
+
+/* Invoice card animations */
+.invoice-card {
+  transition: all 0.3s ease;
+}
+
+.invoice-card:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 12px 40px rgba(167, 139, 250, 0.2);
+}
+
+/* Table styles */
+.ant-table-thead > tr > th {
+  background: #f5f3f8;
+  font-weight: 600;
+  color: #4a5568;
+}
+
+/* Form styles */
+.ant-form-item-label > label {
+  font-weight: 500;
+  color: #4a5568;
+}
+
+/* Button animations */
+.ant-btn {
+  transition: all 0.3s ease;
+}
+
+.ant-btn-primary {
+  background: linear-gradient(135deg, #a78bfa 0%, #c4b5fd 100%);
+  border: none;
+  color: #4c1d95;
+}
+
+.ant-btn-primary:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 4px 12px rgba(167, 139, 250, 0.35);
+  background: linear-gradient(135deg, #c4b5fd 0%, #a78bfa 100%);
+}
+
+/* Tag styles */
+.ant-tag {
+  border: none;
+  border-radius: 12px;
+  font-weight: 500;
+}
+
+/* Card header styles */
+.ant-card-head {
+  border-bottom: 1px solid rgba(167, 139, 250, 0.2);
+}
+
+.ant-card-head-title {
+  font-weight: 600;
+  color: #4a5568;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .ant-table {
+    font-size: 12px;
+  }
+
+  .ant-card-body {
+    padding: 12px;
+  }
+
+  .ant-form-item {
+    margin-bottom: 12px;
+  }
+}
+
+/* Custom scrollbar for tables */
+.ant-table-body::-webkit-scrollbar {
+  height: 8px;
+}
+
+.ant-table-body::-webkit-scrollbar-track {
+  background: #f5f3f8;
+}
+
+.ant-table-body::-webkit-scrollbar-thumb {
+  background: #c4b5fd;
+  border-radius: 4px;
+}
+
+.ant-table-body::-webkit-scrollbar-thumb:hover {
+  background: #a78bfa;
+}
